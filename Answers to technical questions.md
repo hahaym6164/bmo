@@ -42,11 +42,11 @@ Please answer the following questions in a markdown file called Answers to techn
 5.	Please describe yourself using correctly formatted JSON.
   ```
   {
-       "name": "Ming Ying",
+      "name": "Ming Ying",
       "job_title":"Web Developer",
-       "country": "Canada",
-     "year_of_experience_in_web_development": 2,
-    "sense_of_humor": "perfect",
-     "is_he_a_good_person": true
+      "country": "Canada",
+      "year_of_experience_in_web_development": 2,
+      "sense_of_humor": "perfect",
+      "is_he_a_good_person": true
   }
 ```
