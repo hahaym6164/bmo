@@ -12,7 +12,6 @@ export default class Main extends Component {
         this.state = {
             nameKey: 1,
             bookList: [
-                { title: 1, key: 'k1' }, { title: 2, key: 'k2' }
             ],
             allStudentList: [],
             searchByName: '',
@@ -32,9 +31,40 @@ export default class Main extends Component {
             return res.data.docs
         }).catch(e => console.log(e, 'error'))
     }
-    getCoverForEachBook() {
-
+    sortByTitle(e) {
+        let list = this.state.bookList
+        if (list) {
+            list.sort((a, b) => {
+                var titleA = a.title.toUpperCase();
+                var titleB = b.title.toUpperCase()
+                if (titleA < titleB) {
+                    return -1;
+                }
+                if (titleA > titleB) {
+                    return 1;
+                }
+                return 0;
+            })
+            this.setState({
+                bookList: list
+            })
+        }
     }
+    sortByYear(e) {
+        let list = this.state.bookList
+        if (list) {
+            list.sort((a, b) => {
+                console.log(a.first_publish_year);
+                return b.first_publish_year - a.first_publish_year
+            })
+
+            this.setState({
+                bookList: list
+            })
+        }
+    }
+
+
     render() {
         let { bookList } = this.state;
         return (
@@ -42,14 +72,20 @@ export default class Main extends Component {
                 <div className='searchBar'>
                     <form onSubmit={this.searchBooksByTitle.bind(this)}>
                         <label>
-                            Name:
-                            <input type="text" />
-                        </label>
-                        <input type="submit" value="Submit" />
+
+                            <input type="text" className="searchInput" placeholder="Enter Book Title Here" />
+
+                            <input type="submit" className="searchInput" value="Search" /> </label>
+                        <br></br>
+                        <button onClick={this.sortByTitle.bind(this)}> Sort by title</button>
+                        <button onClick={this.sortByYear.bind(this)}>Sort by latest year</button>
                     </form>
                 </div>
+
                 <div className="bookList">
-                    {bookList.map((i) => (
+
+
+                    {bookList && bookList.map((i) => (
                         <div key={i.key} className='singleBook'>
 
 
@@ -57,14 +93,14 @@ export default class Main extends Component {
                             <div className="info">
                                 <h4>{i.title}</h4>
 
-                                <p> First Published Year:  <span>{i.first_publish_year}</span></p>
-                                <p>Authors:</p>
+                                <p>Published:  <span>{i.first_publish_year}</span></p>
+                                <p>Authors:
 
-                                {i.author_name && i.author_name.map(name =>
-                                    <span key={this.state.nameKey++}> {name} </span>
+                                    {i.author_name && i.author_name.map(name =>
+                                        <span className="authors" key={this.state.nameKey++}> {name} <label>/</label></span>
 
-                                )}
-
+                                    )}
+                                </p>
                             </div>
 
                         </div>
