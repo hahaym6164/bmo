@@ -17,7 +17,7 @@ Please answer the following questions in a markdown file called Answers to techn
   
   I'm using javascript ES6. The most useful feature must be arrow function. I keep using it all the time.
   For example in this project 
-  
+  ```
     searchBooksByTitle(e) {
         e.preventDefault()
         let ip = e.target[0].value
@@ -30,7 +30,7 @@ Please answer the following questions in a markdown file called Answers to techn
             return res.data.docs
         }).catch(e => console.log(e, 'error'))
      }
-  
+  ```
   
 3.	How would you track down a performance issue in production? Have you ever had to do this?
   
@@ -40,7 +40,7 @@ Please answer the following questions in a markdown file called Answers to techn
   
   I will try to improve the speed when sending request.
 5.	Please describe yourself using correctly formatted JSON.
-  
+  ```
   {
        "name": "Ming Ying",
       "job_title":"Web Developer",
@@ -49,3 +49,4 @@ Please answer the following questions in a markdown file called Answers to techn
     "sense_of_humor": "perfect",
      "is_he_a_good_person": true
   }
+```
