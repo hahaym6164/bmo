@@ -1,7 +1,8 @@
 Technical questions
 Please answer the following questions in a markdown file called Answers to technical questions.md. 
 1.	How long did you spend on the coding assignment? 
-  About 3 hours, 1 hours for reading and testing all the api,1.5 hours for setting up project and page layout, half hour for github,deployment and this question file.
+    
+    About 3 hours, 1 hours for reading and testing all the api,1.5 hours for setting up project and page layout, half hour for github,deployment and this question file.
   
   a.	What would you add to your solution if you had more time?
     
@@ -41,10 +42,10 @@ Please answer the following questions in a markdown file called Answers to techn
 5.	Please describe yourself using correctly formatted JSON.
   
   {
-  "name": "Ming Ying",
-  "job_title":"Web Developer",
-  "country": "Canada",
-  "year_of_experience_in_web_development": 2,
-  "sense_of_humor": "perfect",
-  "is_he_a_good_person": true
+       "name": "Ming Ying",
+      "job_title":"Web Developer",
+       "country": "Canada",
+     "year_of_experience_in_web_development": 2,
+    "sense_of_humor": "perfect",
+     "is_he_a_good_person": true
   }
