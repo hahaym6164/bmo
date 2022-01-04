@@ -75,7 +75,7 @@ export default class Main extends Component {
 
                             <input type="text" className="searchInput" placeholder="Enter Book Title Here" />
 
-                            <input type="submit" className="searchInput" value="Search" /> </label>
+                            <input type="submit" className="searchInput" value="Search" style={{ cursor: "pointer" }} /> </label>
                         <br></br>
                         <button onClick={this.sortByTitle.bind(this)}> Sort by title</button>
                         <button onClick={this.sortByYear.bind(this)}>Sort by latest year</button>
