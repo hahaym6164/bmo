@@ -77,9 +77,10 @@ export default class Main extends Component {
 
                             <input type="submit" className="searchInput" value="Search" style={{ cursor: "pointer" }} /> </label>
                         <br></br>
+                        </form>
                         <button onClick={this.sortByTitle.bind(this)}> Sort by title</button>
                         <button onClick={this.sortByYear.bind(this)}>Sort by latest year</button>
-                    </form>
+                    
                 </div>
 
                 <div className="bookList">
